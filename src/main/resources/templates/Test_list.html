@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" layout:decorate="~{layout}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+	<div layout:fragment="content" class="container my-3">
+	    <table class="table">
+	        <thead class="table-dark">
+	            <tr>
+	                <th>ID</th>
+	                <th>NAME</th>
+
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr th:each="test, loop : ${testList}">
+	                <td th:text="${test.id}"></td>
+	                <td th:text="${test.name}"></td>
+	            </tr>
+	        </tbody>
+	    </table>
+	</div>
+</body>
+</html>
